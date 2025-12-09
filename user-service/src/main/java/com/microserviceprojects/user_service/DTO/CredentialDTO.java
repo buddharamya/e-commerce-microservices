@@ -1,0 +1,21 @@
+package com.microserviceprojects.user_service.DTO;
+
+import com.microserviceprojects.user_service.Entity.RoleBasedAuthority;
+import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class CredentialDTO {
+
+    private Integer credentialId;
+
+    @NotBlank(message = "Username is required")
+    private String userName;
+
+    @NotBlank(message = "Password is required")
+    private String password;
+
+    private RoleBasedAuthority roleBasedAuthority;
+}
